@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+
+        body {
+            background: url('img/overall-background.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+            background-color: #110303; /* Fallback color */
+            color: #ffffff; /* Fallback text color */
+        }
+
+        .bg-home {
+            background: url('img/cars.jpg') center/cover no-repeat;
+        }
+
+        .bg-services {
+            background: url('img/back.jpg') center/cover no-repeat;
+        }
+
+        .bg-about {
+            background: url('img/back.jpg') center/cover no-repeat;
+        }
+
+        .bg-contact {
+            background: url('img/back.jpg') center/cover no-repeat;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="fixed top-0 left-0 w-full bg-black text-white p-4 z-50 shadow-lg">
+        <nav class="flex justify-center space-x-6">
+            <a href="#home" class="hover:text-gray-400 transition-transform transform hover:scale-110">Home</a>
+            <a href="#services" class="hover:text-gray-400 transition-transform transform hover:scale-110">Services</a>
+            <a href="#about" class="hover:text-gray-400 transition-transform transform hover:scale-110">About</a>
+            <a href="#contact" class="hover:text-gray-400 transition-transform transform hover:scale-110">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="pt-16">
+        <section id="home" class="text-center py-12 relative bg-home bg-black bg-opacity-50">
+            <div class="absolute inset-0">
+                <div class="w-full h-full bg-black opacity-50"></div>
+            </div>
+            <div class="relative z-10 text-white">
+                <h1 class="text-4xl font-bold mb-4">Discover Your Perfect Ride</h1>
+                <p class="text-lg mb-6">At JDM Dealership, we bring you the best selection of new and pre-owned vehicles to suit every need and budget. Our team of experts is dedicated to helping you find the car that’s right for you, with exceptional service and unbeatable prices. From sleek sedans to rugged SUVs, explore our inventory and drive away with confidence.</p>
+                <a href="#services" class="bg-blue-600 text-white py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors">Explore Our Services</a>
+            </div>
+        </section>
+
+        <section id="services" class="py-12 px-6 bg-services">
+            <div class="text-2xl font-semibold mb-4 text-white">Our Services</div>
+            <p class="mb-6 text-white">We offer a range of services to meet your automotive needs:</p>
+            <ul class="space-y-4">
+                <li class="flex items-center space-x-4 hover:bg-gray-800 transition-all rounded-lg p-4 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <img src="img/new-used-cars.jpg" alt="New and Used Car Sales" class="w-40 h-40 object-cover transition-transform transform hover:scale-110">
+                    <span class="text-lg text-white">New and Used Car Sales</span>
+                </li>
+                <li class="flex items-center space-x-4 hover:bg-gray-800 transition-all rounded-lg p-4 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <img src="img/lease.jpg" alt="Car Leasing" class="w-40 h-40 object-cover transition-transform transform hover:scale-110">
+                    <span class="text-lg text-white">Car Leasing</span>
+                </li>
+                <li class="flex items-center space-x-4 hover:bg-gray-800 transition-all rounded-lg p-4 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <img src="img/financing.jpg" alt="Financing Options" class="w-40 h-40 object-cover transition-transform transform hover:scale-110">
+                    <span class="text-lg text-white">Financing Options</span>
+                </li>
+                <li class="flex items-center space-x-4 hover:bg-gray-800 transition-all rounded-lg p-4 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <img src="img/maintenance.jpg" alt="Maintenance and Repairs" class="w-40 h-40 object-cover transition-transform transform hover:scale-110">
+                    <span class="text-lg text-white">Maintenance and Repairs</span>
+                </li>
+                <li class="flex items-center space-x-4 hover:bg-gray-800 transition-all rounded-lg p-4 shadow-lg hover:shadow-xl transform hover:scale-105">
+                    <img src="img/trade-ins.jpg" alt="Trade-Ins" class="w-40 h-40 object-cover transition-transform transform hover:scale-110">
+                    <span class="text-lg text-white">Trade-Ins</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="about" class="py-12 px-6 bg-about">
+            <div class="text-2xl font-semibold mb-4 text-white">About Us</div>
+            <p class="mb-6 text-white">Welcome to JDM Dealership, where excellence meets the road. With over 10 years of experience in the automotive industry, we pride ourselves on offering a diverse range of high-quality vehicles and a commitment to providing outstanding customer service. Our knowledgeable staff is here to guide you through every step of the car-buying process, ensuring a seamless and enjoyable experience.</p>
+            <p class="mb-6 text-white">Whether you’re looking for a brand-new car or a reliable pre-owned vehicle, we have something for everyone. Our state-of-the-art service center is equipped to handle all your maintenance and repair needs, ensuring that your vehicle remains in top condition long after you drive off the lot.</p>
+            <p class="text-white">At JDM Dealership, we believe in building long-term relationships with our customers based on trust and integrity. Visit us today to see why so many drivers choose us for their automotive needs, and experience the difference for yourself.</p>
+        </section>
+
+        <section id="contact" class="py-12 px-6 bg-contact">
+            <div class="text-2xl font-semibold mb-4 text-white">Contact Us</div>
+            <form class="space-y-4 max-w-lg mx-auto">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                <input type="text" name="subject" placeholder="Subject" class="w-full px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-transform transform hover:scale-105">
+                <textarea name="message" rows="5" placeholder="Your Message" required class="w-full px-4 py-2 border border-gray-700 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-transform transform hover:scale-105"></textarea>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors pulse-animation">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white text-center py-4">
+        &copy; 2024 JDM Dealership. All rights reserved.
+        <div class="flex justify-center mt-4 space-x-4">
+            <a href="#" class="hover:text-blue-400 transition-transform transform hover:scale-110"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-transform transform hover:scale-110"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-transform transform hover:scale-110"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-blue-400 transition-transform transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    
+    <!-- FontAwesome for social media icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
